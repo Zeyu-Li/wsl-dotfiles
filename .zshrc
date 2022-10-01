@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions sudo dirhistory jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,13 +109,15 @@ alias cls='clear'
 alias dir='ls'
 alias py="python3"
 alias vim="nvim"
-alias open="thunar"
+alias open1="thunar"
 alias lab="cd 201/lab/"
 alias pac="tar -cvf submit.tar *"
 alias gcom="gcc -Wall -std=c99"
 alias logb="docker-compose logs -f backend"
 alias y="yarn --cwd "
 alias run="(yarn --cwd frontend start:dev &) && yarn --cwd backend start:dev"
+alias open="explorer.exe"
+
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
