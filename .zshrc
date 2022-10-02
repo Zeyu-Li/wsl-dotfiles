@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions sudo dirhistory jsontools)
+plugins=(git zsh-autosuggestions sudo dirhistory jsontools docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,19 +105,33 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -l'
+
+# shortcuts
+# alias copy="xclip -sel c <"
+alias copy="clip.exe <"
+alias his="history"
 alias cls='clear'
 alias dir='ls'
+alias cat='bat --paging=never'
+
+# program alias
 alias py="python3"
+alias python="python3"
+alias vi="nvim"
 alias vim="nvim"
+
+alias open="explorer.exe"
 alias open1="thunar"
+
 alias lab="cd 201/lab/"
 alias pac="tar -cvf submit.tar *"
 alias gcom="gcc -Wall -std=c99"
 alias logb="docker-compose logs -f backend"
-alias y="yarn --cwd "
 alias run="(yarn --cwd frontend start:dev &) && yarn --cwd backend start:dev"
-alias open="explorer.exe"
+alias y="yarn --cwd "
 
+# personal vars
+export EDITOR='nvim'
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
@@ -132,5 +146,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
-
-
